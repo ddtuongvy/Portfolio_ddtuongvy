@@ -1,0 +1,135 @@
+<!-- about.html - Giới thiệu chi tiết -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio_ddtuongvy</title>
+  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Logo tối giản (dùng ảnh nếu có) -->
+        <img src="hinhanh/1.jpg" alt="Logo Vy" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <div class="brand-name">Đào Đoàn Tường Vy</div>
+          <div class="brand-role">Web Developer | IT Student</div>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+    <main>
+<section class="projects-section">
+  <div class="container">
+    <h1 class="sub-title">THỰC HÀNH & XÂY DỰNG</h1>
+    <h2>Những dự án tiêu biểu đã và đang phát triển</h2>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="/hinhanh/projects1.png" alt="Đặt sân cầu lông">
+      </div>
+      <div class="project-info">
+        <h3>Đặt sân cầu lông</h3>
+        <p class="project-desc">
+          Nền tảng quản lý đặt sân cầu lông. Website giúp người dùng dễ dàng xem lịch trống của sân, đặt lịch, thanh toán sân,....
+        </p>
+        <div class="tags">
+          <span>Python</span>
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <a href="https://github.com/F0N9-Perry/Datsancaulong" class="btn-view">Xem dự án</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="/hinhanh/projects2.png" alt="Website bán thiết bị điện tử">
+      </div>
+      <div class="project-info">
+        <h3>Website bán thiết bị điện tử</h3>
+        <p class="project-desc">
+          Website mô phỏng việc bán hàng thông qua thương mại điện tử. Cho phép người dùng xem, tham khảo giá,mua hàng,....
+        </p>
+        <div class="tags">
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>SQL API</span>
+        </div>
+        <a href="https://varust-vn.vercel.app/" class="btn-view">Xem dự án</a>
+      </div>
+    </div>
+  </div>
+</section>
+-----------------------------------------
+      </main>
+    <footer class="site-footer new-layout">
+    <div class="container footer-inner-new-layout">
+        
+        <div class="footer-col footer-info-social">
+            <div class="brand-info-footer">
+                <div class="avatar-placeholder">
+                    <span>DV</span> </div>
+                <div>
+                    <div class="footer-portfolio-title">PORTFOLIO</div>
+                    <div class="footer-name">Đào Đoàn Tường Vy</div>
+                </div>
+            </div>
+            
+            <p class="footer-short-desc">
+                UI/UX & Front-end – Sinh viên CNTT tại UTH University.
+            </p>
+
+            <div class="social-icons-footer">
+                <a href="https://www.facebook.com/daodoantuongvy/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://github.com/ddtuongvy" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/ddtuongvy/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col footer-contact">
+            <h4 class="contact-heading">Liên hệ</h4>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Trường Đại học Giao Thông Vận Tải TP.HCM</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>daodoantuongvy12@gmail.com</span> 
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>09699906077</span> 
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer-copyright">
+        © <span id="year-new-footer">2025</span> Đào Đoàn Tường Vy. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year-new-footer').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+</body>
+</html>

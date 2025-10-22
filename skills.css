@@ -1,0 +1,296 @@
+/* ====== CẤU TRÚC CHUNG ====== */
+.skills-section {
+  background: black;
+  padding: 80px 0;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+    flex-direction: row-reverse; /* 💡 Đảo ngược thứ tự */
+}
+
+.skills .skills-content h1{
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.3;
+    color:#b74b4b;
+    margin-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.skills-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.skills-content p{
+    font-size: 1.6rem;
+}
+.details-grid {
+    display: grid;
+    /* Chia thành 2 cột bằng nhau */
+    grid-template-columns: repeat(2, 1fr); 
+    /* Khoảng cách giữa các mục */
+    gap: 30px; 
+    margin-top: 40px; /* Thêm khoảng cách phía trên */
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    /* Màu nhãn (label) nhạt hơn */
+    color: #888888; 
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1rem;
+    /* Màu giá trị (value) trắng, đậm */
+    font-weight: 700; 
+    color: #ffffff;
+}
+.about-img{
+    border-radius: 50%;
+}
+
+.about-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.about-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+/* ====== HÀNG 1: CÁC KỸ NĂNG CHÍNH ====== */
+.main-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.skill-card {
+  flex: 1;
+  min-width: 280px;
+  background: #1a1a1a;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.skill-card:hover {
+  border-color: #b74b4b;
+    box-shadow: 0 0 15px #b74b4b;
+}
+
+.skill-card h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card li {
+  margin-bottom: 12px;
+  font-size: 1.7rem;
+}
+
+.bar {
+  display: block;
+  background: #2b2b2b;
+  border-radius: 10px;
+  height: 6px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #b74b4b,#b74b4b);
+  border-radius: 10px;
+}
+
+/* ====== HÀNG 2: KỸ NĂNG NỔI BẬT ====== */
+.highlight-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.highlight-title h2 {
+  font-size: 2.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.highlight-title p {
+  color: #ccc;
+  font-size: 1.7rem;
+}
+
+.highlight-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.highlight-card {
+  background: #1a1a1a;;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid #b74b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  color: #fff;
+}
+
+.highlight-card h3 {
+  font-size: 2.0rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.highlight-card p {
+  font-size: 1.5rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .main-skills {
+    flex-direction: column;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .skills {
+    flex-direction: column-reverse; /* Đưa ảnh xuống dưới phần text */
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .skills .skills-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .skills-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .skills-content p {
+    font-size: 1.4rem;
+  }
+
+  .about-img img {
+    width: 55vw;
+  }
+
+  .main-skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skill-card {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .highlight-skills {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 50px 0;
+  }
+
+  .skills .skills-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .skills-content h3 {
+    font-size: 2rem;
+  }
+
+  .skills-content p {
+    font-size: 1.3rem;
+  }
+
+  .about-img img {
+    width: 70vw;
+  }
+
+  .highlight-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .highlight-title p {
+    font-size: 1.3rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-card p {
+    font-size: 1.2rem;
+  }
+
+  .circle {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+}
