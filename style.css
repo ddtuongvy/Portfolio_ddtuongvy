@@ -36,7 +36,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 14px 5%;
+  padding: 14px 5%;
+  flex-wrap: wrap; 
 }
 /* Brand bên trái */
 .brand { display: flex; gap: 12px; align-items: center; }
@@ -53,6 +55,12 @@ body{
 .logo:hover{
     transform: scale(1.1);
 }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2rem;
+}
 nav a{
     font-size: 1.8rem;
     color: white;
@@ -66,6 +74,75 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.site-nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .site-nav a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-text .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .brand-text .brand-role {
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: 0.8rem;
+  }
+
+  .site-nav a {
+    font-size: 1.3rem;
+  }
+}
+
 /*--------------FOOTER-------------*/
 .site-footer.new-layout {
     background-color: #120A0A;
@@ -206,27 +283,23 @@ nav a.active{
 }
 @media(max-width:995px){
     nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    position: static !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border: none !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
     }
-
     nav.active{
         display: block;
     }
 
     nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        display: inline-block !important;
+    margin: 10px 15px !important;
+    font-size: 1.6rem !important;
     }
 
     nav a:hover,
